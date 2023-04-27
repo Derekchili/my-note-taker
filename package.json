@@ -2,8 +2,9 @@
   "name": "my-note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
+    "uuid": "^3.4.0",
     "accepts": "^1.3.8",
     "ansi-escapes": "^4.3.2",
     "ansi-regex": "^5.0.1",
