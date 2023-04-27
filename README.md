@@ -8,14 +8,14 @@ This app allows you as a small business owner to make a new todo by adding a new
 ## Usage
  Here are some screenshots showing what the app looks like when there are notes and seeing the note to be completed.
 
- here is the link to github: 
+ here is the link to github: https://github.com/Derekchili/my-note-taker.git
 
- here is the link to Heroku:
+ here is the link to Heroku:  https://dsc-note-taker.herokuapp.com/notes
 
-![alt text](assets/images/screenshot.png)
+![alt text](Assets/images/screenshot.png)
 
 
-![alt text](assets/images/screenshot1.png)
+![alt text](Assets/images/screenshot1.png)
 
 
 ## Credits
