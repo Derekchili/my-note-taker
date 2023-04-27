@@ -1,17 +1,9 @@
 const express = require('express');
-const router = express.Router();
-const path = require('path');
 
-router.get('/', (req, res)=>{
-    res.sendFile(path.join(_dirname, '../public/index.html'))
-})
+const notesControl = require('./notesControllers');
 
-router.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '../public/notes.html'))
-);
+const app = express();
 
-router.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+app.use('/notes', notesControl);
 
-module.exports = router;
+module.exports = app;

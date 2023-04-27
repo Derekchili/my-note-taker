@@ -1,14 +1,28 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
+const { mdl } = require('./middleware/mdl');
+const api = require('./controllers/index');
+
+// const api = require("./controllers/index.js");
+
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 
-app.use(express.static('public'))
+app.use(mdl);
 
-app.use(express.urlencoded({ extended: true}));
+//Middleware to Parse JSON and the url encoded form data
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use("/api", api);
 
-const allRoutes = require('./controllers');
-app.use(allRoutes)
+app.use(express.static("public"));
 
-app.listen(3000, ()=>{
-    console.log('listening on port 3000!')
-})
+// Get RT for the homepage
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/public/index.html")));
+
+//get RT for notes html page
+app.get("/notes", (req, res) => res.sendFile(path.join(__dirname, "/public/notes.html")));
+// app.get("/*", (req, res) => res.sendFile(path.join(__dirname, "/public/notes.html")));
+
+app.listen(PORT, () => console.log(`App listening at http://localhost:${PORT} 🚀`));

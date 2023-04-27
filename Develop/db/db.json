@@ -1,6 +1,22 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "This and that ",
+        "text": "this is a new note"
+    },
+    {
+        "title": "I like to do da cha cha",
+        "text": "it seems where having some technical difficulties"
+    },
+    {
+        "title": "This Title says ITALL",
+        "text": "yeah boi.. whaa whaa... drops the mic"
+    },
+    {
+        "title": "this",
+        "text": "and that"
     }
 ]
